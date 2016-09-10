@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Lionheart
+MAINTAINER KorriganMaster <contact@korrigansoft.com>
 RUN apt-get update && apt-get install -y \
 		teeworlds-server
 RUN ln -s /usr/games/teeworlds-server /usr/local/bin/teeworlds-server
