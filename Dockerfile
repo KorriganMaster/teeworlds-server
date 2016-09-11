@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM armv7/armhf-ubuntu:latest
 MAINTAINER KorriganMaster <contact@korrigansoft.com>
 RUN apt-get update && apt-get install -y \
 		teeworlds-server
