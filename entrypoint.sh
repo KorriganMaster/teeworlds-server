@@ -2,10 +2,16 @@
 
 set -e
 
-if [ ! -f '/teeworlds/server.log' ]; then
-	touch server.log
+dataspath='/teeworlds/datas'
+
+if [ ! -f "$dataspath/server.log" ]; then
+	touch $dataspath/server.log
 fi
 
-teeworlds-server -f serverconfig.cfg
+if [ ! -f "$dataspath/serverconfig.cfg" ]; then
+	cp /teeworlds/serverconfig.cfg $dataspath/serverconfig.cfg
+fi
+
+teeworlds-server -f $dataspath/serverconfig.cfg
 
 exec "$@"
