@@ -3,7 +3,7 @@ Teeworlds Server
 
 A simple Teeworlds server for docker.
 
-The default configuration proposes a DM Teeworld server which will appear on your LAN as *Teeworlds Server* on port 8303. The default password is *teeworlds*. The default password for remote console access is *rconadmin*.
+The default configuration proposes a DM Teeworld server which will appear on your LAN as *Teeworlds Server* on port 8303. The default password is **teeworlds**. The default password for remote console access is **rconadmin**.
 
 To run the server with its default configuration:
 
