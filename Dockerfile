@@ -1,7 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER KorriganMaster <contact@korrigansoft.com>
 RUN apt-get update && apt-get install -y \
-		teeworlds-server
+		teeworlds-server \
+	&& rm -rf /var/lib/apt/lists/*
 RUN ln -s /usr/games/teeworlds-server /usr/local/bin/teeworlds-server
 RUN useradd teeworlds --home /teeworlds --create-home
 COPY ./entrypoint.sh /
