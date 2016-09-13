@@ -1,5 +1,14 @@
 FROM ubuntu:latest
 MAINTAINER KorriganMaster <contact@korrigansoft.com>
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL 	com.korrigansoft.build-date=$BUILD_DATE \
+		com.korrigansoft.docker.dockerfile="/Dockerfile" \
+		com.korrigansoft.license="MIT" \
+		com.korrigansoft.name="Teeworlds server Docker image" \
+		com.korrigansoft.vcs-ref=$VCS_REF \
+		com.korrigansoft.vcs-type="Git" \
+		com.korrigansoft.vcs-url="https://github.com/KorriganMaster/teeworlds-server"
 RUN apt-get update && apt-get install -y \
 		teeworlds-server \
 	&& rm -rf /var/lib/apt/lists/*
